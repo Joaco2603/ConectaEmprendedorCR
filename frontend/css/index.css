@@ -1,4 +1,320 @@
+
+:root {
+    /* Colors */
+    --color-primary: #075056;
+    --color-secondary: #16232A;
+    --color-orange: #ff5b05;
+    --color-text-dark: #000;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+
+    /* Fonts */
+    --font-family-title: 'Arial', sans-serif;
+    --font-family-body: 'Arial', sans-serif;
+    --font-size-base: 16px;
+}
+
+/* Formateo */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el width/height */
+  margin: 0;
+  padding: 0;
+}
+
+/* Base para el HTML y Body */
+html {
+  font-size: 16px; /* Define el tamaño base para unidades 'rem' */
+  scroll-behavior: smooth; /* Desplazamiento suave para anclas */
+}
+
 body{
     font-family: "Inter", sans-serif;
     height: 100vh;
+}
+
+/* Titles and subtitles */
+
+.title_big{
+    font-size: 4em;
+}
+
+.title_medium{
+    font-size: 3em;
+}
+
+.subtitle{
+    font-size: 3em;
+}
+
+.paragraph{
+    font-size: 1.5em;
+}
+
+/* Color class */
+
+.menu > li > .text_white{
+    color: white;
+}
+
+.menu > li > .text_white:hover{
+    color: white;
+    text-decoration-line: underline;
+}
+
+/* Common Functions */
+
+
+/* Menu */
+
+nav {
+  background: #fff;
+  padding: 1rem 2rem;
+  color: black;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo > img{
+    margin-top: 1.2em;
+    width: 70px;
+    height: 100%;
+}
+
+/* Hamburger */
+#toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #000;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  height: 3em;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  /* Define the transition for transforming the Stroke */
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+#toggle:checked + .hamburger svg {
+  transform: rotate(-45deg);
+}
+
+#toggle:checked + .hamburger svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+.menu li {
+  position: relative;
+  z-index: 50;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: 0.3s;
+  color: #000;
+}
+
+.menu li a:hover {
+  color: #000;
+}
+
+/* Dropdown */
+.menu li ul {
+  /* margin: 10px 0; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  list-style: none;
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  min-width: 160px;
+}
+
+.menu li:hover ul {
+  display: block;
+}
+
+.menu li ul li a {
+  padding: 0.6rem 1rem;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    color: #000;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li ul {
+    position: static;
+    box-shadow: none;
+  }
+
+  #toggle:checked + .hamburger + .menu {
+    max-height: 1000px;
+    margin-top: 2rem;
+  }
+}
+
+/* Buttons */
+
+.button {
+  position: relative;
+  padding: 15px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:hover{
+opacity: 0.8;
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, var(--color-primary) 20%, transparent 30%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--color-primary) 15%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--color-primary) 15%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+    radial-gradient(circle, var(--color-primary) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
 }
