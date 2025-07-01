@@ -1,0 +1,157 @@
+
+:root {
+    /* Colors */
+    --color-primary: #075056;
+    --color-secondary: #16232A;
+    --color-orange: #ff5b05;
+    --color-text-dark: #000;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+
+    /* Fonts */
+    --font-family-title: 'Arial', sans-serif;
+    --font-family-body: 'Arial', sans-serif;
+    --font-size-base: 16px;
+}
+
+.form_center_div{
+display: flex;
+justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  min-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+.title {
+  font-size: 28px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,
+.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: var(--color-primary);
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: var(--color-primary);
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message,
+.signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.forgot_password > a{
+  color: var(--color-primary);
+  text-align: left;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: #075056;
+}
+
+.signin a:hover {
+  text-decoration: underline #075056;
+}
+
+.div_sub_container_form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 6px;
+}
+.div_sub_container_form > input {
+  width: 100%;
+}
+
+
+.form label {
+  position: relative;
+  width: 100%;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 0 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,
+.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+
+.form label .input:valid + span {
+  color: green;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}

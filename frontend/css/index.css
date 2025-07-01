@@ -1,20 +1,19 @@
-
 :root {
-    /* Colors */
-    --color-primary: #075056;
-    --color-secondary: #16232A;
-    --color-orange: #ff5b05;
-    --color-text-dark: #000;
+  /* Colors */
+  --color-primary: #075056;
+  --color-secondary: #16232a;
+  --color-orange: #ff5b05;
+  --color-text-dark: #000;
 
-    /* Spacing */
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 24px;
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
 
-    /* Fonts */
-    --font-family-title: 'Arial', sans-serif;
-    --font-family-body: 'Arial', sans-serif;
-    --font-size-base: 16px;
+  /* Fonts */
+  --font-family-title: "Arial", sans-serif;
+  --font-family-body: "Arial", sans-serif;
+  --font-size-base: 16px;
 }
 
 /* Formateo */
@@ -33,42 +32,41 @@ html {
   scroll-behavior: smooth; /* Desplazamiento suave para anclas */
 }
 
-body{
-    font-family: "Inter", sans-serif;
-    height: 100vh;
+body {
+  font-family: "Inter", sans-serif;
+  height: 100vh;
 }
 
 /* Titles and subtitles */
 
-.title_big{
-    font-size: 4em;
+.title_big {
+  font-size: 5rem;
 }
 
-.title_medium{
-    font-size: 3em;
+.title_medium {
+  font-size: 4rem;
 }
 
-.subtitle{
-    font-size: 3em;
+.subtitle {
+  font-size: 3rem;
 }
 
-.paragraph{
-    font-size: 1.5em;
+.paragraph {
+  font-size: 1.5rem;
 }
 
 /* Color class */
 
-.menu > li > .text_white{
-    color: white;
+.menu > li > .text_white {
+  color: white;
 }
 
-.menu > li > .text_white:hover{
-    color: white;
-    text-decoration-line: underline;
+.menu > li > .text_white:hover {
+  color: white;
+  text-decoration-line: underline;
 }
 
 /* Common Functions */
-
 
 /* Menu */
 
@@ -85,10 +83,10 @@ nav {
   flex-wrap: wrap;
 }
 
-.logo > img{
-    margin-top: 1.2em;
-    width: 70px;
-    height: 100%;
+.logo > img {
+  margin-top: 1.2rem;
+  width: 70px;
+  height: 100%;
 }
 
 /* Hamburger */
@@ -134,7 +132,7 @@ nav {
   stroke-width: 3;
   /* Define the transition for transforming the Stroke */
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line-top-bottom {
@@ -218,6 +216,24 @@ nav {
   }
 }
 
+@media (min-width: 1500px) {
+  .title_big {
+    font-size: 6rem;
+  }
+
+  .title_medium {
+    font-size: 5rem;
+  }
+
+  .subtitle {
+    font-size: 5rem;
+  }
+
+  .paragraph {
+    font-size: 2rem;
+  }
+}
+
 /* Buttons */
 
 .button {
@@ -227,17 +243,25 @@ nav {
   border: none;
   color: #fff;
   cursor: pointer;
-  background-color: var(--color-primary);
   transition: all 0.2s ease;
   width: 100%;
+  min-width: 100px;
+}
+
+.button_color_primary {
+  background-color: var(--color-primary);
+}
+
+.button_color_secondary {
+  background-color: var(--color-secondary);
 }
 
 .button:active {
   transform: scale(0.96);
 }
 
-.button:hover{
-opacity: 0.8;
+.button:hover {
+  opacity: 0.8;
 }
 
 .button:before,
@@ -254,11 +278,25 @@ opacity: 0.8;
 
 .button:hover:before {
   top: -70%;
-  background-image: radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, var(--color-primary) 20%, transparent 30%),
+  background-image: radial-gradient(
+      circle,
+      var(--color-primary) 20%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle,
+      transparent 20%,
+      var(--color-primary) 20%,
+      transparent 30%
+    ),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, var(--color-primary) 15%, transparent 20%),
+    radial-gradient(
+      circle,
+      transparent 10%,
+      var(--color-primary) 15%,
+      transparent 20%
+    ),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
@@ -289,9 +327,18 @@ opacity: 0.8;
 
 .button:hover::after {
   bottom: -70%;
-  background-image: radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
+  background-image: radial-gradient(
+      circle,
+      var(--color-primary) 20%,
+      transparent 20%
+    ),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, var(--color-primary) 15%, transparent 20%),
+    radial-gradient(
+      circle,
+      transparent 10%,
+      var(--color-primary) 15%,
+      transparent 20%
+    ),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
     radial-gradient(circle, var(--color-primary) 20%, transparent 20%),
@@ -316,5 +363,75 @@ opacity: 0.8;
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+/*  footer */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  background-color: black;
+  padding: 80px 0;
+}
+
+.footer_row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer_links {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer_links h4 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.footer_links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(204, 200, 200);
+  display: block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer_links ul li a:hover {
+  color: #075056;
+  padding-left: 6px;
+}
+
+.social_links a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgb(204, 200, 200);
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.social_links a:hover {
+  background-color: #075056;
+}
+
+@media (max-width: 991px) {
+  .footer_row {
+    text-align: center;
+  }
+
+  .footer_links {
+    width: 100%;
+    margin-bottom: 30px;
   }
 }
