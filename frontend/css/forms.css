@@ -139,6 +139,9 @@ justify-content: center;
   font-weight: 600;
 }
 
+.form label .error_message {
+  color: #ff3333 !important;
+}
 
 .form label .input:valid + span {
   color: green;
@@ -201,18 +204,3 @@ justify-content: center;
   display: none;
 }
 
-.error-message {
-  color: #ff3333;
-  font-size: 0.8rem;
-  margin-top: 0.25rem;
-  display: none;
-}
-
-.input.error {
-  border-color: #ff3333;
-}
-
-/* Mostrar errores cuando hay un problema */
-.input.error + .error-message {
-  display: block;
-}

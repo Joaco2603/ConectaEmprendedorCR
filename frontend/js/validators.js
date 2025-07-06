@@ -16,17 +16,17 @@ export const validators = {
   }),
   
   alpha: (value) => ({
-    isValid: /^[a-zA-Z\s]+$/.test(value),
+    isValid: /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(value),
     error: 'Solo letras permitidas'
-  })
+  }),
   
-  // Puedes añadir más validadores aquí
-};
-
-// Función para analizar las reglas de validación
-export const parseValidationRules = (rulesString) => {
-  return rulesString.split('|').map(rule => {
-    const [name, param] = rule.split(':');
-    return { name, param };
-  });
+  password: (value) => ({
+    isValid: value.length >= 8 && /[A-Z]/.test(value) && /[0-9]/.test(value),
+    error: 'Debe tener 8+ caracteres, una mayúscula y un número'
+  }),
+  
+  matches: (value, fieldId, form) => ({
+    isValid: value === form.querySelector(`#${fieldId}`).value,
+    error: 'Las contraseñas no coinciden'
+  })
 };
