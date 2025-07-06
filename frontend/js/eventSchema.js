@@ -1,18 +1,13 @@
-import { FormValidator } from './eventFormValidator.js';
+import { FormValidator } from "./FormValidator.js";
 
 // Schema validation
 const validationSchema = {
-    name: [
+    title: [
         { name: 'required' },
         { name: 'minLength', param: 5 },
         { name: 'maxLength', param: 10 },
     ],
-    contact: [
-        { name: 'required' },
-        { name: 'minLength', param: 8 },
-        { name: 'maxLength', param: 8 },
-    ],
-    schedule: [
+    description: [
         { name: 'required' },
         { name: 'minLength', param: 5 },
         { name: 'maxLength', param: 400 },
@@ -23,7 +18,6 @@ const validationSchema = {
         { name: 'maxLength', param: 400 },
     ]
 };
-
 
 
 // Creation of class FormValidator

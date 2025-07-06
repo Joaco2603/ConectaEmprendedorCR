@@ -20,6 +20,5 @@ const validationSchema = {
 };
 
 
-
 // Creation of class FormValidator
 new FormValidator('form', validationSchema);

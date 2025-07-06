@@ -1,4 +1,4 @@
-import { FormValidator } from './eventFormValidator.js';
+import { FormValidator } from './eventSchema.js';
 
 // Schema validation
 const validationSchema = {

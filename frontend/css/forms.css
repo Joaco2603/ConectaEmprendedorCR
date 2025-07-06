@@ -94,7 +94,7 @@
 
 .div_sub_container_form {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
   gap: 6px;
 }
@@ -248,4 +248,41 @@
 #selectedValue {
   font-weight: 600;
   color: var(--color-primary);
+}
+
+
+.button_back {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+
+.button_back_box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button_elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #000;
+}
+
+.button:hover .button_back_box,
+.button:focus .button_back_box {
+  transition: 0.4s;
+  transform: translateX(-56px);
 }
