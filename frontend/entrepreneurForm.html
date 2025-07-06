@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="form_center_div">
-      <form class="form">
+      <form class="form" id="form">
         <div class="div_sub_container_form">
-          <button class="button_back">
+          <a href="./entrepreneur.html" class="button_back">
             <div class="button_back_box">
               <span class="button_elem">
                 <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
@@ -28,25 +28,54 @@
                 </svg>
               </span>
             </div>
-          </button>
+          </a>
           <p class="title">Registrar emprendimiento</p>
         </div>
 
-        <p class="message">Bienvenido a nuestros vecinos.</p>
         <div class="div_sub_container_form">
           <label>
-            <input required="" placeholder="" type="text" class="input" />
+            <input
+              required=""
+              placeholder=""
+              type="text"
+              class="input"
+              id="name_entrepreneur"
+            />
             <span>Nombre del emprendimiento</span>
           </label>
         </div>
 
         <label>
-          <input required="" placeholder="" type="text" class="input" />
+          <input
+            required=""
+            placeholder=""
+            type="text"
+            class="input"
+            id="description"
+          />
+          <span>Descripcion</span>
+        </label>
+
+        <label>
+          <input
+            required=""
+            placeholder=""
+            type="text"
+            class="input"
+            id="type_entrepreneur"
+          />
           <span>Tipo de emprendimiento</span>
         </label>
+
         <label>
-          <input required="" placeholder="" type="text" class="input" />
-          <span>Telefono del emprendimiento</span>
+          <input
+            required=""
+            placeholder=""
+            type="text"
+            class="input"
+            id="contact"
+          />
+          <span>Teléfono del emprendimiento</span>
         </label>
 
         <label class="custum-file-upload" for="file">
@@ -71,13 +100,16 @@
           <div class="text">
             <span>Subir imagen</span>
           </div>
-          <input type="file" id="file" />
+          <!-- <input type="file" id="file" /> -->
         </label>
 
         <br />
 
-        <button class="button button_color_primary">Enviar</button>
+        <button class="button button_color_primary">
+          Crear emprendimiento
+        </button>
       </form>
     </div>
+    <script type="module" src="./js/entrepreneurSchema.js"></script>
   </body>
 </html>

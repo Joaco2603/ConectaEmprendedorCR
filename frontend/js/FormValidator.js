@@ -1,5 +1,8 @@
+import { validators } from './validators.js'
+import { users } from './mockups.js';
+
 export class FormValidator {
-    constructor(formId, schema) {
+    constructor(formId, schema, endPoint = '') {
         this.form = document.getElementById(formId);
         this.schema = schema;
         this.inputs = Array.from(this.form.querySelectorAll('input'));
@@ -27,8 +30,23 @@ export class FormValidator {
             if (!this.validateForm()) {
                 e.preventDefault();
             } else {
-                console.log('Formulario válido, se puede enviar');
-                // Aquí podrías agregar el envío real del formulario
+                e.preventDefault();
+                const data = this.form.querySelectorAll('input');
+
+                if (users[0].email == data[0].value && users[0].password == data[1].value) {
+                    // Aquí podrías agregar el envío real del formulario
+                    window.location.replace('./welcomeAdmin.html');
+                }
+                if (users[1].email == data[0] && users[1].password == data[1]) {
+                    // Aquí podrías agregar el envío real del formulario
+                    window.location.replace('./welcomeEntrepreneur.html');
+                } 
+                if (users[2].email == data[0] && users[2].password == data[1]){
+                    // Aquí podrías agregar el envío real del formulario
+                    window.location.replace('./welcomeCitizen.html');
+                }else{
+                    alert('error datos incorrectos')
+                }
             }
         });
     }
