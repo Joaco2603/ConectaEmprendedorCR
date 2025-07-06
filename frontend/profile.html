@@ -1,33 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="profile.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/forms.css">
+  <link rel="stylesheet" href="./css/profile.css">
 </head>
+
 <body>
- <div class="conteiner">
+
+  <main class="container_user_profile">
+
+    <!-- Card del usuario -->
+    <section class="card_user_profile">
+      <img src="./imgs/perfil.jpg" alt="User Photo">
+      <div class="div_user_info">
+        <h2 class="section_heading">Datos del usuario</h2>
+        <p><strong>Nombre:</strong></p>
+        <p><strong>Correo:</strong></p>
+        <p><strong>Telefono:</strong></p>
+        <input type="date" value="" disabled class="input_text_secondary_small">
+        <p><strong>Role:</strong> Citizen</p>
+      </div>
+    </section>
+
+    <!-- Formulario editable -->
+    <form class="form form_user_profile">
+      <h2 class="section_heading">Editar informacion</h2>
+      <label>
+        <input required="" placeholder="" type="email" class="input" />
+        <span>Nombre</span>
+      </label>
+      <label>
+        <input required="" placeholder="" type="password" class="input" />
+        <span>Apellido</span>
+      </label>
+      <label>
+        <input required="" placeholder="" type="email" class="input" />
+        <span>Correo</span>
+      </label>
+      <label>
+        <input required="" placeholder="" type="password" class="input" />
+        <span>Contraseña</span>
+      </label>
+      <label>
+        <input required="" placeholder="" type="phone" class="input" />
+        <span>Telefono</span>
+      </label>
+
+      <input type="date" value="2020-07-31" class="input">
+      <button class="button button_color_primary">Editar</button>
+      </section>
+
+  </main>
 
 
-    <div class="card">
-        <img src="#" alt="Foto de usuario">
-        <h3>Datos</h3>
-        <button class=" "></button>
-        <input type="text" placeholder="Nombre">
-        <input type="text" placeholder="Apallido">
-        <input type="email" placeholder="correo">
-        <input type="password" placeholder="Contraseña">
-        <input type="tel" placeholder="telefono">
+  <footer class="footer">
+    <div class="container">
+      <div class="footer_row">
+        <div class="footer_links">
+          <h4>Mis vecinos</h4>
+          <ul>
+            <li><a href="#">Code Crafters team</a></li>
+            <li><a href="#">codecrafters.com</a></li>
+            <li><a href="#"> #code-crafters</a></li>
+          </ul>
+        </div>
+        <div class="footer_links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">How It Works</a></li>
+          </ul>
+        </div>
+        <div class="footer_links">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="#"> (506) 60324248 </a></li>
+            <li><a href="#">info@codecrafters.com </a></li>
+          </ul>
+        </div>
+        <div class="footer_links">
+          <h4>Siguenos en redes sociales</h4>
+          <div class="social_links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-
- </div>
-    
-
-
-
+  </footer>
+  <script src="profile.js"></script>
 </body>
+
 </html>
