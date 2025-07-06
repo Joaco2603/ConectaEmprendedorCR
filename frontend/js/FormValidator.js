@@ -35,14 +35,23 @@ export class FormValidator {
 
                 if (users[0].email == data[0].value && users[0].password == data[1].value) {
                     // Aquí podrías agregar el envío real del formulario
+                    localStorage.setItem('rol','admin')
+                    localStorage.setItem('email', data[0].value)
+                    localStorage.setItem('password', data[1].value)
                     window.location.replace('./welcomeAdmin.html');
                 }
                 if (users[1].email == data[0] && users[1].password == data[1]) {
                     // Aquí podrías agregar el envío real del formulario
+                    localStorage.setItem('rol','entrepreneur')
+                    localStorage.setItem('email', data[0].value)
+                    localStorage.setItem('password', data[1].value)
                     window.location.replace('./welcomeEntrepreneur.html');
                 } 
                 if (users[2].email == data[0] && users[2].password == data[1]){
                     // Aquí podrías agregar el envío real del formulario
+                    localStorage.setItem('rol','citizen')
+                    localStorage.setItem('email', data[0].value)
+                    localStorage.setItem('password', data[1].value)
                     window.location.replace('./welcomeCitizen.html');
                 }else{
                     alert('error datos incorrectos')
