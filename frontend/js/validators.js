@@ -1,18 +1,32 @@
-// js/validators.js
-// (Asegúrate de que este archivo está exportando isString, isEmpty, etc.)
-export function isString(value) {
-    return typeof value === 'string';
-}
+// Validadores básicos
+export const validators = {
+  required: (value) => ({
+    isValid: !!value.trim(),
+    error: 'Este campo es requerido'
+  }),
+  
+  minLength: (value, min) => ({
+    isValid: value.length >= min,
+    error: `Mínimo ${min} caracteres`
+  }),
+  
+  email: (value) => ({
+    isValid: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+    error: 'Email inválido'
+  }),
+  
+  alpha: (value) => ({
+    isValid: /^[a-zA-Z\s]+$/.test(value),
+    error: 'Solo letras permitidas'
+  })
+  
+  // Puedes añadir más validadores aquí
+};
 
-export function isEmpty(value) {
-    return value.trim() === '';
-}
-
-export function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-export function isMinLength(value, min) {
-    return value.length >= min;
-}
+// Función para analizar las reglas de validación
+export const parseValidationRules = (rulesString) => {
+  return rulesString.split('|').map(rule => {
+    const [name, param] = rule.split(':');
+    return { name, param };
+  });
+};

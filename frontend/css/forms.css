@@ -200,3 +200,19 @@ justify-content: center;
 .custum-file-upload input {
   display: none;
 }
+
+.error-message {
+  color: #ff3333;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.input.error {
+  border-color: #ff3333;
+}
+
+/* Mostrar errores cuando hay un problema */
+.input.error + .error-message {
+  display: block;
+}
