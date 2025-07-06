@@ -1,25 +1,24 @@
-
 :root {
-    /* Colors */
-    --color-primary: #075056;
-    --color-secondary: #16232A;
-    --color-orange: #ff5b05;
-    --color-text-dark: #000;
+  /* Colors */
+  --color-primary: #075056;
+  --color-secondary: #16232a;
+  --color-orange: #ff5b05;
+  --color-text-dark: #000;
 
-    /* Spacing */
-    --spacing-small: 8px;
-    --spacing-medium: 16px;
-    --spacing-large: 24px;
+  /* Spacing */
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
 
-    /* Fonts */
-    --font-family-title: 'Arial', sans-serif;
-    --font-family-body: 'Arial', sans-serif;
-    --font-size-base: 16px;
+  /* Fonts */
+  --font-family-title: "Arial", sans-serif;
+  --font-family-body: "Arial", sans-serif;
+  --font-size-base: 16px;
 }
 
-.form_center_div{
-display: flex;
-justify-content: center;
+.form_center_div {
+  display: flex;
+  justify-content: center;
 }
 
 .form {
@@ -76,7 +75,7 @@ justify-content: center;
   font-size: 14px;
 }
 
-.forgot_password > a{
+.forgot_password > a {
   color: var(--color-primary);
   text-align: left;
 }
@@ -102,7 +101,6 @@ justify-content: center;
 .div_sub_container_form > input {
   width: 100%;
 }
-
 
 .form label {
   position: relative;
@@ -159,8 +157,6 @@ justify-content: center;
   }
 }
 
-
-/* From Uiverse.io by Yaya12085 */ 
 .custum-file-upload {
   height: 200px;
   width: 300px;
@@ -175,7 +171,7 @@ justify-content: center;
   background-color: rgba(255, 255, 255, 1);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0px 48px 35px -48px rgba(0,0,0,0.1);
+  box-shadow: 0px 48px 35px -48px rgba(0, 0, 0, 0.1);
 }
 
 .custum-file-upload .icon {
@@ -204,3 +200,52 @@ justify-content: center;
   display: none;
 }
 
+.custom-select {
+  width: 100%;
+  padding: 12px 15px;
+  padding-right: 40px; /* Espacio para la flecha */
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #4a5568;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none; /* Oculta la flecha nativa */
+  -webkit-appearance: none; /* Para navegadores basados en Webkit */
+  -moz-appearance: none; /* Para Firefox */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+/* Flecha personalizada usando un pseudoelemento */
+.custom-select-wrapper::after {
+  content: "▼"; /* Carácter de flecha */
+  font-size: 0.8rem;
+  color: #000;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Para que no interfiera con el click en el select */
+  transition: color 0.3s ease;
+}
+
+.custom-select option {
+  background-color: #ffffff;
+  color: #4a5568;
+  padding: 10px;
+  border: none;
+}
+
+.custom-select option:checked {
+  background-color: #e0e7ff; /* Color para la opción seleccionada */
+  color: var(--color-secondary);
+}
+
+#selectedValue {
+  font-weight: 600;
+  color: var(--color-primary);
+}

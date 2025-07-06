@@ -10,6 +10,11 @@ export const validators = {
     error: `Mínimo ${min} caracteres`
   }),
   
+  maxLength: (value, max) =>({
+    isValid: value.length <= max,
+    error: `Maximos ${max} caracteres`
+  }),
+
   email: (value) => ({
     isValid: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
     error: 'Email inválido'

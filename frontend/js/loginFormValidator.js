@@ -1,5 +1,17 @@
-const forms = document.querySelector("#form");
+import {FormValidator} from './FormValidator.js'
 
-const login_validation = {
-    
-}
+// Schema validation
+const validationSchema = {
+    email: [
+        { name: 'required' },
+        { name: 'email' }
+    ],
+    password: [
+        { name: 'required' },
+        { name: 'password' }
+    ],
+};
+
+
+// Creation of class FormValidator
+new FormValidator('form', validationSchema);

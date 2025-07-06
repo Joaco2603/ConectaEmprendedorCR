@@ -6,13 +6,19 @@
     <title>login</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/forms.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
     <div class="form_center_div">
       <form class="form" id="form">
-        <p class="title">Crear evento</p>
+        <p class="title">Crear horario de transporte</p>
 
         <label>
           <input
@@ -20,9 +26,9 @@
             placeholder=""
             type="text"
             class="input"
-            id="title"
+            id="name"
           />
-          <span>Titulo</span>
+          <span>Nombre de la parada</span>
         </label>
 
         <label>
@@ -31,9 +37,20 @@
             placeholder=""
             type="text"
             class="input"
-            id="description"
+            id="contact"
           />
-          <span>Descripción</span>
+          <span>Contacto</span>
+        </label>
+
+        <label>
+          <input
+            required=""
+            placeholder=""
+            type="text"
+            class="input"
+            id="schedules"
+          />
+          <span>Horarios</span>
         </label>
 
         <label>
@@ -47,16 +64,7 @@
           <span>Ubicación</span>
         </label>
 
-        <select id="myDropdown" class="custom-select">
-          <option value="" disabled selected>Selecciona un organizador</option>
-          <option value="opcion1">Opción Uno</option>
-          <option value="opcion2">Opción Dos</option>
-          <option value="opcion3">Opción Tres</option>
-          <option value="opcion4">Opción Cuatro</option>
-          <option value="opcion5">Opción Cinco</option>
-        </select>
-
-        <button class="button button_color_primary">Crear Evento</button>
+        <button class="button button_color_primary">Crear horario</button>
       </form>
     </div>
 
@@ -99,5 +107,5 @@
       </div>
     </footer>
   </body>
-  <script type="module" src="./js/eventFormValidator.js"></script>
+  <script type="module" src="./js/transportFormValidator.js"></script>
 </html>

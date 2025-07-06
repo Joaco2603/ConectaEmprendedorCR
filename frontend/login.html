@@ -1,77 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/forms.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>login</title>
-  <link rel="stylesheet" href="./css/index.css" />
-  <link rel="stylesheet" href="./css/forms.css" />
-</head>
+  <body>
+    <div class="form_center_div">
+      <form class="form" id="form">
+        <p class="title">Iniciar sesion</p>
+        <p class="message">Bienvenido a nuestros vecinos.</p>
 
-<body>
-  <div class="form_center_div">
-    <form class="form">
-      <p class="title">Iniciar sesion</p>
-      <p class="message">Bienvenido a nuestros vecinos.</p>
+        <label>
+          <input
+            required=""
+            placeholder=""
+            type="email"
+            class="input"
+            id="email"
+          />
+          <span>Correo</span>
+        </label>
 
-      <label>
-        <input required="" placeholder="" type="email" class="input" />
-        <span>Correo</span>
-      </label>
+        <label>
+          <input
+            required=""
+            placeholder=""
+            type="password"
+            class="input"
+            id="password"
+          />
+          <span>Contraseña</span>
+        </label>
 
-      <label>
-        <input required="" placeholder="" type="password" class="input" />
-        <span>Contraseña</span>
-      </label>
+        <p class="forgot_password">
+          <a href="./forgot_password.html">Olvidaste tu contraseña</a>
+        </p>
+        <button class="button button_color_primary">Iniciar sesion</button>
+        <p class="signin">
+          Ya cuentas con una cuenta ? <a href="./signup.html">Registrarse</a>
+        </p>
+      </form>
+    </div>
 
-      <p class="forgot_password"><a href="./forgot_password.html">Olvidaste tu contraseña</a></p>
-      <button class="button button_color_primary">Iniciar sesion</button>
-      <p class="signin">
-        Ya cuentas con una cuenta ? <a href="./signup.html">Registrarse</a>
-      </p>
-    </form>
-  </div>
-
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer_row">
-        <div class="footer_links">
-          <h4>Mis vecinos</h4>
-          <ul>
-            <li><a href="#">Code Crafters team</a></li>
-            <li><a href="#">codecrafters.com</a></li>
-            <li><a href="#"> #code-crafters</a></li>
-          </ul>
-        </div>
-        <div class="footer_links">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">How It Works</a></li>
-          </ul>
-        </div>
-        <div class="footer_links">
-          <h4>Get In Touch</h4>
-          <ul>
-            <li><a href="#"> (506) 60324248 </a></li>
-            <li><a href="#">info@codecrafters.com </a></li>
-          </ul>
-        </div>
-        <div class="footer_links">
-          <h4>Siguenos en redes sociales</h4>
-          <div class="social_links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_row">
+          <div class="footer_links">
+            <h4>Mis vecinos</h4>
+            <ul>
+              <li><a href="#">Code Crafters team</a></li>
+              <li><a href="#">codecrafters.com</a></li>
+              <li><a href="#"> #code-crafters</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Compañía</h4>
+            <ul>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">Carrera</a></li>
+              <li><a href="#">Documentacion</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Contactos</h4>
+            <ul>
+              <li><a href="#"> (506) 60324248 </a></li>
+              <li><a href="#">info@codecrafters.com </a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Siguenos en redes sociales</h4>
+            <div class="social_links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </footer>
+  </body>
+  <script type="module" src="./js/loginFormValidator.js"></script>
 </html>
