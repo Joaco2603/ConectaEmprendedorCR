@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     roleRequired: 'admin',
     containerClass: 'creation_div',
     html: ``,
-    buttonText: 'Crear evento',
-    buttonHref: 'eventForm.html',
+    buttonText: 'Crear transporte',
+    buttonHref: 'transportForm.html',
   });
 });

@@ -1,28 +1,31 @@
 /**
- * Renderiza contenido basado en el rol del usuario, permitiendo HTML personalizado.
+ * Renderiza contenido basado en roles permitidos (ahora con array).
  * @param {Object} config - Configuración para la página actual.
- * @param {string} config.roleRequired - Rol necesario para mostrar el contenido.
+ * @param {string|string[]} config.roleRequired - Rol o array de roles permitidos (ej: 'entrepreneur' o ['admin', 'organizer']).
  * @param {string} config.containerId - ID del contenedor donde se insertará el contenido.
- * @param {string} config.html - Template string con HTML personalizado (ej: `<h1>Título</h1><p>Descripción</p>`).
+ * @param {string} config.html - Template string con HTML personalizado.
  * @param {string} [config.buttonText] - Texto del botón (opcional).
  * @param {string} [config.buttonHref] - Enlace del botón (opcional).
  * @param {Function} [config.onButtonClick] - Función al hacer clic en el botón (opcional).
  */
-export function renderRoleBasedContent(config) {
+function renderRoleBasedContent(config) {
   const userRole = localStorage.getItem('rol');
   const container = document.getElementById(config.containerId);
 
-  if (userRole === config.roleRequired && container) {
-    // Limpiar contenedor y agregar HTML personalizado
+  // Convertir roleRequired a array si es un string (para simplificar la lógica)
+  const allowedRoles = Array.isArray(config.roleRequired) 
+    ? config.roleRequired 
+    : [config.roleRequired];
+
+  // Verificar si el rol del usuario está en los permitidos y si el contenedor existe
+  if (allowedRoles.includes(userRole) && container) {
     container.innerHTML = config.html;
 
-    // Si se define un botón, crearlo y añadirlo al contenedor
     if (config.buttonText) {
       const button = document.createElement('button');
       button.textContent = config.buttonText;
       button.classList.add('button', 'button_color_primary');
 
-      // Asignar acción al botón
       if (config.buttonHref) {
         button.addEventListener('click', () => {
           window.location.href = config.buttonHref;
