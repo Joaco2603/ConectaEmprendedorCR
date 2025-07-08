@@ -6,6 +6,7 @@
     <title>Quejas</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/cards.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <nav>
@@ -30,7 +31,8 @@
         </label>
 
         <ul class="menu">
-          <li><a href="./complaint.html">Anuncios</a></li>
+          <li><a href="./advertisement.html">Anuncios</a></li>
+          <li><a href="./complaint.html">Quejas</a></li>
           <li><a href="./event.html">Eventos</a></li>
           <li><a href="./transport.html">Transporte</a></li>
           <li><a href="./entrepreneur.html">Emprendimientos</a></li>
@@ -39,35 +41,37 @@
     </nav>
 
     <div class="setup_creation_container">
-      <h1>Transporte</h1>
+      <h1>Quejas</h1>
       <div class="creation_div"></div>
     </div>
 
-    <div class="eventos-container">
+    <div class="container_cards">
       <div class="card">
-        <img src="./imgs/img_cards/Maratón.jpg" alt="imagen de Evento" />
+        <img src="./imgs/img_cards/complaint.jpeg" alt="imagen de Evento" />
         <div class="card-content">
-          <h3>Maraton</h3>
+          <h3>Seguridad</h3>
           <p><strong>Fecha:</strong> 20 de agosto</p>
           <p><strong>Lugar:</strong> Estadio Nacional</p>
+          <p><strong>Descripcion:</strong> Incidente de vandalismo en área común.</p>
         </div>
       </div>
 
       <div class="card">
         <img
-          src="./imgs/img_cards/Feria del Agricultor.jpeg"
+          src="./imgs/img_cards/complaint.jpeg"
           alt="imagen de Evento"
         />
         <div class="card-content">
-          <h3>Feria del Agricultor</h3>
+          <h3>Medio Ambiente</h3>
           <p><strong>Fecha</strong> 1 de agosto</p>
           <p><strong>Lugar:</strong>Ciudad Colón</p>
+          <p><strong>Descripcion:</strong> Monitoreo de uso de agua en el sector.</p>
         </div>
       </div>
 
       <div class="card">
         <img
-          src="./imgs/img_cards/Feria del Agricultor.jpeg"
+          src="./imgs/img_cards/complaint.jpeg"
           alt="imagen de Evento"
         />
         <div class="card-content">
@@ -77,6 +81,45 @@
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_row">
+          <div class="footer_links">
+            <h4>Mis vecinos</h4>
+            <ul>
+              <li><a href="#">Code Crafters team</a></li>
+              <li><a href="#">codecrafters.com</a></li>
+              <li><a href="#"> #code-crafters</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Compañía</h4>
+            <ul>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">Como trabajar con nosotros?</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Contactanos</h4>
+            <ul>
+              <li><a href="#"> (506) 60324248 </a></li>
+              <li><a href="#">info@codecrafters.com </a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Siguenos en redes sociales</h4>
+            <div class="social_links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script type="module" src="./js/createComplaintSetup.js"></script>
+  <script type="module" src="./js/navAdmin.js"></script>
 </html>

@@ -1,16 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-}
 
-body {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-}
-
-.eventos-container {
+.container_cards {
   display: flex;
   flex-direction: row;
   gap: 20px;
@@ -84,7 +73,7 @@ body {
 }
 
 .edit-btn:hover {
-  background-color: #0056b3;
+  background-color: #1b9217;
 }
 
 /* Estilo botón eliminar */

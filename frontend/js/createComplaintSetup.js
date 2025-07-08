@@ -2,10 +2,10 @@ import {renderRoleBasedContent} from './creationSetup.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   renderRoleBasedContent({
-    roleRequired: 'citizen',
+    roleRequired: ['citizen','entrepreneur'],
     containerClass: 'creation_div',
     html: ``,
-    buttonText: 'Crear evento',
-    buttonHref: 'eventForm.html',
+    buttonText: 'Crear queja',
+    buttonHref: 'complaintmentForm.html',
   });
 });

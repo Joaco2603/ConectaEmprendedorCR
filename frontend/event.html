@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Event</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/cards.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <nav>
@@ -41,6 +49,85 @@
       <h1>Eventos</h1>
       <div class="creation_div"></div>
     </div>
+
+    <div class="container_cards">
+      <div class="card">
+        <img src="./imgs/img_cards/run.jpeg" alt="imagen de Evento" />
+        <div class="card-content">
+          <h3>Carrera 5K y 10K</h3>
+          <p>Lucha contra el cáncer de mama</p>
+          <p><strong>Fecha:</strong> 5 octubre 2025</p>
+          <p><strong>Hora:</strong> 6:30am</p>
+          <p><strong> Lugar: </strong> Paseo Colon</p>
+          <p><strong>Precio: </strong> ¢12.000</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img
+          src="./imgs/img_cards/Feria del Agricultor.jpeg"
+          alt="imagen de Evento"
+        />
+        <div class="card-content">
+          <h3>Feria del agricultor</h3>
+          <p><strong>Fecha:</strong> Todos los Sabados</p>
+          <p><strong> Horario: </strong> 5:00am a 12:00 pm</p>
+          <p><strong> Lugar: </strong> Paseo Colon</p>
+          <p><strong> Precio: </strong> Gratuito</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="./imgs/img_cards/concert.jpg" alt="imagen de Evento" />
+        <div class="card-content">
+          <h3>Concierto Techno</h3>
+          <p><strong> Boris Brejcha </strong></p>
+          <p><strong>Fecha:</strong> Sabado 9 de agosto</p>
+          <p><strong>Hora:</strong> 10:00pm</p>
+          <p><strong> Lugar: </strong> Parque La Sabana</p>
+          <p><strong> Precio: </strong> Gratuito</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_row">
+          <div class="footer_links">
+            <h4>Mis vecinos</h4>
+            <ul>
+              <li><a href="#">Code Crafters team</a></li>
+              <li><a href="#">codecrafters.com</a></li>
+              <li><a href="#"> #code-crafters</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Compañía</h4>
+            <ul>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">Como trabajar con nosotros?</a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Contactanos</h4>
+            <ul>
+              <li><a href="#"> (506) 60324248 </a></li>
+              <li><a href="#">info@codecrafters.com </a></li>
+            </ul>
+          </div>
+          <div class="footer_links">
+            <h4>Siguenos en redes sociales</h4>
+            <div class="social_links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script type="module" src="./js/createEventSetup.js"></script>
+  <script type="module" src="./js/navAdmin.js"></script>
 </html>

@@ -7,6 +7,11 @@ const validationSchema = {
         { name: 'minLength', param: 5 },
         { name: 'maxLength', param: 400 },
     ],
+    address: [
+        { name: 'required' },
+        { name: 'minLength', param: 5 },
+        { name: 'maxLength', param: 400 },
+    ]
 };
 
 

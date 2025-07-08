@@ -2,15 +2,15 @@
  * Renderiza contenido basado en roles permitidos (ahora con array).
  * @param {Object} config - Configuración para la página actual.
  * @param {string|string[]} config.roleRequired - Rol o array de roles permitidos (ej: 'entrepreneur' o ['admin', 'organizer']).
- * @param {string} config.containerId - ID del contenedor donde se insertará el contenido.
+ * @param {string} config.containerClass - ID del contenedor donde se insertará el contenido.
  * @param {string} config.html - Template string con HTML personalizado.
  * @param {string} [config.buttonText] - Texto del botón (opcional).
  * @param {string} [config.buttonHref] - Enlace del botón (opcional).
  * @param {Function} [config.onButtonClick] - Función al hacer clic en el botón (opcional).
  */
-function renderRoleBasedContent(config) {
+export function renderRoleBasedContent(config) {
   const userRole = localStorage.getItem('rol');
-  const container = document.getElementById(config.containerId);
+  const container = document.querySelector('.'+config.containerClass);
 
   // Convertir roleRequired a array si es un string (para simplificar la lógica)
   const allowedRoles = Array.isArray(config.roleRequired) 
