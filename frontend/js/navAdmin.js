@@ -48,8 +48,8 @@ function setupUserNav() {
     });
   } else if (userData === 'admin') {
       // Si es admin, puedes querer redirigir a un panel de administración
-      userLink.href = './welcomeAdmin.html'; // Ejemplo: un enlace para administradores
-      userLink.textContent = `Panel Admin (${userData})`;
+      userLink.href = './users.html'; // Ejemplo: un enlace para administradores
+      userLink.textContent = `Usuarios`;
   }
 }
 

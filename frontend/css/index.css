@@ -436,3 +436,28 @@ nav {
     margin-bottom: 30px;
   }
 }
+
+
+.creation_div{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.creation_div > button{
+  width: 10%;
+}
+
+.setup_creation_container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.setup_separete_button{
+  display: flex;
+  justify-content: space-around;
+}
+
+.setup_separete_button>button{
+  margin: 10px;
+}
