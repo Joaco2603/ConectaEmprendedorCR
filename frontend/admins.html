@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quejas</title>
+    <title>Usuarios</title>
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/cardsButtons.css" />
     <link
@@ -42,8 +42,8 @@
 
         <ul class="menu">
           <li><a href="./advertisement.html">Anuncios</a></li>
-          <li><a href="./event.html">Eventos</a></li>
           <li><a href="./complaint.html">Quejas</a></li>
+          <li><a href="./event.html">Eventos</a></li>
           <li><a href="./transport.html">Transporte</a></li>
           <li><a href="./entrepreneur.html">Emprendimientos</a></li>
         </ul>
@@ -51,81 +51,57 @@
     </nav>
 
     <div class="setup_creation_container">
-      <h1>Quejas</h1>
-      <div class="creation_div"></div>
+      <h1>Usuarios</h1>
+
+      <h2>28 usuarios encontrados</h2>
+      <div class="creation_div">
+        <div class="setup_separete_button">
+          <a href="./users.html" class="button button_color_primary"> Ver usuarios </a>
+          <a href="./userForm.html" class="button button_color_primary">Crear usuario</a>
+        </div>
+      </div>
     </div>
 
     <div class="container_cards">
       <div class="card">
+        <img src="./imgs/perfil.jpg" alt="Imagen de Evento" />
         <div class="card-content">
-          <h3>Seguridad</h3>
-          <p><strong>Fecha:</strong> 20 de agosto</p>
-          <p><strong>Lugar:</strong> Estadio Nacional</p>
-          <p>
-            <strong>Descripcion:</strong> Incidente de vandalismo en área común.
-          </p>
+          <h3>Carlos Perez</h3>
+          <p><strong>Nacio:</strong> 20 de agosto</p>
+          <p><strong>Rol:</strong> Admin</p>
+          <div class="card_buttons">
+            <button class="edit_btn">Editar</button>
+            <button class="delete_btn">Eliminar</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
+        <img src="./imgs/perfil.jpg" alt="Imagen de Evento" />
         <div class="card-content">
-          <h3>Medio Ambiente</h3>
-          <p><strong>Fecha</strong> 1 de agosto</p>
-          <p><strong>Lugar:</strong>Ciudad Colón</p>
-          <p>
-            <strong>Descripcion:</strong> Monitoreo de uso de agua en el sector.
-          </p>
+          <h3>Josue Valverde</h3>
+          <p><strong>Nacio:</strong> 1 de agosto</p>
+          <p><strong>Rol:</strong> Admin</p>
+          <div class="card_buttons">
+            <button class="edit_btn">Editar</button>
+            <button class="delete_btn">Eliminar</button>
+          </div>
         </div>
       </div>
 
       <div class="card">
+        <img src="./imgs/perfil.jpg" alt="Imagen de Evento" />
         <div class="card-content">
-          <h3>Familiares Sin Humo</h3>
-          <p><strong>Fecha</strong> 7 de agosto</p>
-          <p><strong>Lugar:</strong>Ciudad Colón</p>
+          <h3>Joaquin Pappa</h3>
+          <p><strong>Nacio:</strong> 7 de agosto</p>
+          <p><strong>Rol:</strong> Admin</p>
+          <div class="card_buttons">
+            <button class="edit_btn">Editar</button>
+            <button class="delete_btn">Eliminar</button>
+          </div>
         </div>
       </div>
     </div>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer_row">
-          <div class="footer_links">
-            <h4>Mis vecinos</h4>
-            <ul>
-              <li><a href="#">Code Crafters team</a></li>
-              <li><a href="#">codecrafters.com</a></li>
-              <li><a href="#"> #code-crafters</a></li>
-            </ul>
-          </div>
-          <div class="footer_links">
-            <h4>Compañía</h4>
-            <ul>
-              <li><a href="#">Sobre nosotros</a></li>
-              <li><a href="#">Como trabajar con nosotros?</a></li>
-            </ul>
-          </div>
-          <div class="footer_links">
-            <h4>Contactanos</h4>
-            <ul>
-              <li><a href="#"> (506) 60324248 </a></li>
-              <li><a href="#">info@codecrafters.com </a></li>
-            </ul>
-          </div>
-          <div class="footer_links">
-            <h4>Siguenos en redes sociales</h4>
-            <div class="social_links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
-  <script type="module" src="./js/createComplaintSetup.js"></script>
   <script type="module" src="./js/navAdmin.js"></script>
-  <script type="module" src="./js/changeCardsAdmin.js"></script>
 </html>

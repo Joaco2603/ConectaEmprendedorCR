@@ -246,6 +246,7 @@ nav {
   transition: all 0.2s ease;
   width: 100%;
   min-width: 100px;
+  font-size: 1em;
 }
 
 .button_color_primary {
@@ -466,4 +467,9 @@ nav {
 .div_container_information{
   width: 40%;
   margin-top: 2em;
+}
+
+
+.setup_separete_button > a{
+  margin: 1em;
 }
