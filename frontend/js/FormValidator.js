@@ -30,7 +30,7 @@ export class FormValidator {
             if (!this.validateForm()) {
                 e.preventDefault();
             } else {
-                e.preventDefault();
+               e.preventDefault();
                 const data = this.form.querySelectorAll('input');
 
                 if (users[0].email == data[0].value && users[0].password == data[1].value) {

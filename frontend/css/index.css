@@ -48,7 +48,7 @@ body {
 }
 
 .subtitle {
-  font-size: 3rem;
+  font-size: 2em;
 }
 
 .paragraph {
@@ -226,7 +226,7 @@ nav {
   }
 
   .subtitle {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 
   .paragraph {
@@ -447,4 +447,23 @@ nav {
 
 .setup_creation_container h1 {
   margin: 0;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_end {
+  text-align: end;
+}
+
+.div_center{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.div_container_information{
+  width: 40%;
+  margin-top: 2em;
 }

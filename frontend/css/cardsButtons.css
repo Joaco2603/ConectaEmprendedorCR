@@ -14,6 +14,7 @@
   width: 260px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  margin: 4em;
 }
 
 .card:hover {
@@ -49,14 +50,14 @@
   color: #666;
   margin-bottom: 5px;
 }
-.card-buttons {
+.card_buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
 }
 
-.card-buttons button {
+.card_buttons button {
   padding: 6px 14px;
   border: none;
   border-radius: 6px;
@@ -67,22 +68,22 @@
 }
 
 /* Estilo botón editar */
-.edit-btn {
+.edit_btn {
   background-color: #097106;
   color: #fff;
 }
 
-.edit-btn:hover {
+.edit_btn:hover {
   background-color: #1b9217;
 }
 
 /* Estilo botón eliminar */
-.delete-btn {
+.delete_btn {
   background-color: #dc3545;
   color: #fff;
 }
 
-.delete-btn:hover {
+.delete_btn:hover {
   background-color: #a71d2a;
 }
 
@@ -94,12 +95,12 @@
     align-items: center;
   }
 
-  .card-buttons {
+  .card_buttons {
     flex-direction: column;
     gap: 8px;
   }
 
-  .card-buttons button {
+  .card_buttons button {
     width: 100%;
   }
 }
