@@ -33,6 +33,9 @@ export class FormValidator {
                e.preventDefault();
                 const data = this.form.querySelectorAll('input');
 
+                console.log(data)
+                console.log(users[1])
+
                 if (users[0].email == data[0].value && users[0].password == data[1].value) {
                     // Aquí podrías agregar el envío real del formulario
                     localStorage.setItem('rol','admin')
@@ -40,21 +43,19 @@ export class FormValidator {
                     localStorage.setItem('password', data[1].value)
                     window.location.replace('./welcomeAdmin.html');
                 }
-                if (users[1].email == data[0] && users[1].password == data[1]) {
+                if (users[1].email == data[0].value && users[1].password == data[1].value) {
                     // Aquí podrías agregar el envío real del formulario
                     localStorage.setItem('rol','entrepreneur')
                     localStorage.setItem('email', data[0].value)
                     localStorage.setItem('password', data[1].value)
                     window.location.replace('./welcomeEntrepreneur.html');
                 } 
-                if (users[2].email == data[0] && users[2].password == data[1]){
+                if (users[2].email == data[0].value && users[2].password == data[1].value){
                     // Aquí podrías agregar el envío real del formulario
                     localStorage.setItem('rol','citizen')
                     localStorage.setItem('email', data[0].value)
                     localStorage.setItem('password', data[1].value)
                     window.location.replace('./welcomeCitizen.html');
-                }else{
-                    alert('error datos incorrectos')
                 }
             }
         });

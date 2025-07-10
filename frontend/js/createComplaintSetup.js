@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       containerClass: 'creation_div',
       html: '',
       buttonText: 'Crear queja',
-      buttonHref: 'complaintmentForm.html',
+      buttonHref: 'complaintForm.html',
     });
   }
 });
